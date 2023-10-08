@@ -33,9 +33,24 @@ class _LoginPageState extends State<LoginPage> {
                 height: 40,
               ),
               Image.asset('assets/images/logo.png'),
-              Text(
-                'WiseWealth',
-                style: TextStyle(fontSize: 32, color: Colors.white),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Wise',
+                    style: TextStyle(
+                        fontSize: 32,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  Text(
+                    'Wealth',
+                    style: TextStyle(
+                        fontSize: 32,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w300),
+                  ),
+                ],
               ), // Make sure the path is correct
               SizedBox(
                   height:
@@ -66,13 +81,17 @@ class _LoginPageState extends State<LoginPage> {
                           Text(
                             'Login',
                             style: TextStyle(
-                                color: Color(0xff0A1D79), fontSize: 32),
+                                color: Color(0xff0A1D79),
+                                fontSize: 34,
+                                fontWeight: FontWeight.w400),
                           ),
                           SizedBox(height: 8),
                           Text(
                             'Please sign in to continue',
                             style: TextStyle(
-                                color: Color(0xff00063B), fontSize: 12),
+                                color: Color(0xff00063B),
+                                fontSize: 14,
+                                fontWeight: FontWeight.w500),
                           ),
                           SizedBox(height: 24),
                           TextField(
@@ -131,7 +150,9 @@ class _LoginPageState extends State<LoginPage> {
                                   ),
                                 ),
                                 hintText: 'Password',
-                                hintStyle: TextStyle(color: Color(0xffaeaeae)),
+                                hintStyle: TextStyle(
+                                  color: Color(0xffaeaeae),
+                                ),
                                 suffixIcon: Padding(
                                   padding: EdgeInsets.only(
                                     top: 0,
@@ -157,6 +178,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           Center(
                             child: Container(
+                              // padding: EdgeInsets.fromLTRB(0, 12, 0, 12),
                               height: 50,
                               width: 176,
                               decoration: BoxDecoration(
@@ -178,7 +200,9 @@ class _LoginPageState extends State<LoginPage> {
                                     shadowColor: Colors.transparent),
                                 child: Text(
                                   'Login',
-                                  style: TextStyle(fontSize: 20),
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w700),
                                 ),
                               ),
                             ),
@@ -213,9 +237,9 @@ class _LoginPageState extends State<LoginPage> {
                                 child: Text(
                                   'Forget Your Password?',
                                   style: TextStyle(
-                                    color: Color(0xff00063B),
-                                    fontSize: 16,
-                                  ),
+                                      color: Color(0xff00063B),
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600),
                                 ),
                                 onPressed: () {}),
                           ),

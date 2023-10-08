@@ -12,11 +12,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'My App',
-      theme: ThemeData(
-         // Set your primary color
-       // Set your default font
-        // You can define other global styles here
-      ),
+      theme: ThemeData(fontFamily: 'Barlow'
+          // Set your primary color
+          // Set your default font
+          // You can define other global styles here
+          ),
       home: LoginPage(),
     );
   }
