@@ -1,21 +1,19 @@
-import 'package:btracker/signup.dart';
+import 'package:btracker/loginpage.dart';
 import 'package:flutter/material.dart';
-import 'package:validators/validators.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _LoginPageState extends State<LoginPage> {
-  bool _isObscure = true;
-
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Center(
@@ -31,31 +29,9 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                height: 40,
+                height: 80,
               ),
-              Image.asset('assets/images/logo.png'),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Wise',
-                    style: TextStyle(
-                        fontSize: 32,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  Text(
-                    'Wealth',
-                    style: TextStyle(
-                        fontSize: 32,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w300),
-                  ),
-                ],
-              ), // Make sure the path is correct
-              SizedBox(
-                  height:
-                      40), // Add spacing between the image and other widgets
+
               Expanded(
                 child: Container(
                     padding: EdgeInsets.fromLTRB(30, 100, 30, 0),
@@ -80,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Login',
+                            'Sign Up',
                             style: TextStyle(
                                 color: Color(0xff0A1D79),
                                 fontSize: 34,
@@ -88,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           SizedBox(height: 8),
                           Text(
-                            'Please sign in to continue',
+                            'Please make a new account',
                             style: TextStyle(
                                 color: Color(0xff00063B),
                                 fontSize: 14,
@@ -125,54 +101,71 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           SizedBox(height: 10),
                           TextField(
-                            obscureText: _isObscure,
+                            obscureText: true,
                             cursorColor: Color(0xffB7B3B3),
                             style: TextStyle(
                                 color: Color(0xff00063B), fontSize: 18),
                             decoration: InputDecoration(
-                                contentPadding: EdgeInsets.symmetric(
-                                    vertical: 18.0, horizontal: 24.0),
-                                filled: true,
-                                fillColor: Color(0xfff9f9f9),
-                                border: OutlineInputBorder(
-                                    borderSide: BorderSide.none,
-                                    borderRadius: BorderRadius.circular(50)),
-                                prefixIcon: Padding(
-                                  padding: EdgeInsets.only(
-                                    top: 0,
-                                    left: 20.0,
-                                    right: 20.0,
-                                    bottom: 0.0,
-                                  ),
-                                  child: Icon(
-                                    Icons.lock_outline,
-                                    size: 28,
-                                    color: Color(0xffaeaeae),
-                                  ),
+                              contentPadding: EdgeInsets.symmetric(
+                                  vertical: 18.0, horizontal: 24.0),
+                              filled: true,
+                              fillColor: Color(0xfff9f9f9),
+                              border: OutlineInputBorder(
+                                  borderSide: BorderSide.none,
+                                  borderRadius: BorderRadius.circular(50)),
+                              prefixIcon: Padding(
+                                padding: EdgeInsets.only(
+                                  top: 0,
+                                  left: 20.0,
+                                  right: 20.0,
+                                  bottom: 0.0,
                                 ),
-                                hintText: 'Password',
-                                hintStyle: TextStyle(
+                                child: Icon(
+                                  Icons.lock_outline,
+                                  size: 28,
                                   color: Color(0xffaeaeae),
                                 ),
-                                suffixIcon: Padding(
-                                  padding: EdgeInsets.only(
-                                    top: 0,
-                                    left: 10.0,
-                                    right: 20.0,
-                                    bottom: 0.0,
-                                  ),
-                                  child: IconButton(
-                                      icon: Icon(_isObscure
-                                          ? Icons.visibility
-                                          : Icons.visibility_off),
-                                      color: Color(0xff646464),
-                                      iconSize: 28,
-                                      onPressed: () {
-                                        setState(() {
-                                          _isObscure = !_isObscure;
-                                        });
-                                      }),
-                                )),
+                              ),
+                              hintText: 'Password',
+                              hintStyle: TextStyle(
+                                color: Color(0xffaeaeae),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          TextField(
+                            obscureText: true,
+                            cursorColor: Color(0xffB7B3B3),
+                            style: TextStyle(
+                                color: Color(0xff00063B), fontSize: 18),
+                            decoration: InputDecoration(
+                              contentPadding: EdgeInsets.symmetric(
+                                  vertical: 18.0, horizontal: 24.0),
+                              filled: true,
+                              fillColor: Color(0xfff9f9f9),
+                              border: OutlineInputBorder(
+                                  borderSide: BorderSide.none,
+                                  borderRadius: BorderRadius.circular(50)),
+                              prefixIcon: Padding(
+                                padding: EdgeInsets.only(
+                                  top: 0,
+                                  left: 20.0,
+                                  right: 20.0,
+                                  bottom: 0.0,
+                                ),
+                                child: Icon(
+                                  Icons.lock_outline,
+                                  size: 28,
+                                  color: Color(0xffaeaeae),
+                                ),
+                              ),
+                              hintText: 'Confirm Password',
+                              hintStyle: TextStyle(
+                                color: Color(0xffaeaeae),
+                              ),
+                            ),
                           ),
                           SizedBox(
                             height: 47,
@@ -200,7 +193,7 @@ class _LoginPageState extends State<LoginPage> {
                                     backgroundColor: Colors.transparent,
                                     shadowColor: Colors.transparent),
                                 child: Text(
-                                  'Login',
+                                  'Sign In',
                                   style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.w700),
@@ -215,13 +208,13 @@ class _LoginPageState extends State<LoginPage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                'Don’t have an account?',
+                                'Or go back to',
                                 style: TextStyle(
                                     color: Color(0xffB7B3B3), fontSize: 14),
                               ),
                               TextButton(
                                   child: Text(
-                                    'Sign Up',
+                                    'Login',
                                     style: TextStyle(
                                       color: Color(0xff00D1FF),
                                       fontSize: 14,
@@ -231,23 +224,9 @@ class _LoginPageState extends State<LoginPage> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => SignUp()));
+                                            builder: (context) => LoginPage()));
                                   }),
                             ],
-                          ),
-                          SizedBox(
-                            height: 35,
-                          ),
-                          Center(
-                            child: TextButton(
-                                child: Text(
-                                  'Forget Your Password?',
-                                  style: TextStyle(
-                                      color: Color(0xff00063B),
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                                onPressed: () {}),
                           ),
                         ],
                       ),
