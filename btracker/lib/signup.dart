@@ -12,7 +12,6 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -173,7 +172,7 @@ class _SignUpState extends State<SignUp> {
                           Center(
                             child: Container(
                               // padding: EdgeInsets.fromLTRB(0, 12, 0, 12),
-                              height: 50,
+                              height: 55,
                               width: 176,
                               decoration: BoxDecoration(
                                 gradient: LinearGradient(
