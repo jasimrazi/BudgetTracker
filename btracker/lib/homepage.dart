@@ -85,208 +85,285 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: ListView(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-                      child: Container(
-                        padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
-                        decoration: BoxDecoration(
-                          color: Color(0xfff9f9f9),
-                          borderRadius: BorderRadius.all(Radius.circular(24)),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Total Balance',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0xff00063B),
-                              ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                      padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+                      decoration: BoxDecoration(
+                        color: Color(0xfff9f9f9),
+                        borderRadius: BorderRadius.all(Radius.circular(24)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Total Balance',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xff00063B),
                             ),
-                            Text(
-                              '75000',
-                              style: TextStyle(
-                                fontSize: 48,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0xff0054AC),
-                                fontStyle: FontStyle.italic,
-                              ),
-                            )
-                          ],
-                        ),
+                          ),
+                          Text(
+                            '75000',
+                            style: TextStyle(
+                              fontSize: 48,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xff0054AC),
+                              fontStyle: FontStyle.italic,
+                            ),
+                          )
+                        ],
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                      child: Container(
-                        padding: EdgeInsets.fromLTRB(30, 20, 30, 30),
-                        decoration: BoxDecoration(
-                          color: Color(0xfff9f9f9),
-                          borderRadius: BorderRadius.all(Radius.circular(24)),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Accounts',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0xff00063B),
-                              ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                      padding: EdgeInsets.fromLTRB(30, 20, 30, 30),
+                      decoration: BoxDecoration(
+                        color: Color(0xfff9f9f9),
+                        borderRadius: BorderRadius.all(Radius.circular(24)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Accounts',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xff00063B),
                             ),
-                            SizedBox(
-                              height: 15,
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          Container(
+                            height: 95,
+                            child: ListView(
+                              scrollDirection: Axis.horizontal,
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.fromLTRB(0, 0, 17, 0),
+                                  padding: EdgeInsets.fromLTRB(11, 8, 11, 4),
+                                  decoration: BoxDecoration(
+                                    color: Color(0xffc5edf9),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(13)),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Canara Bank',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 16,
+                                          color: Color(0xff00063B),
+                                        ),
+                                      ),
+                                      Text(
+                                        '₹48000',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 24,
+                                          color: Color(0xff0054AC),
+                                          fontStyle: FontStyle.italic,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.fromLTRB(0, 0, 17, 0),
+                                  padding: EdgeInsets.fromLTRB(11, 8, 11, 4),
+                                  decoration: BoxDecoration(
+                                    color: Color(0xffc5edf9),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(13)),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Emergency Fund',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 16,
+                                          color: Color(0xff00063B),
+                                        ),
+                                      ),
+                                      Text(
+                                        '₹22000',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 24,
+                                          color: Color(0xff0054AC),
+                                          fontStyle: FontStyle.italic,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.fromLTRB(0, 0, 17, 0),
+                                  padding: EdgeInsets.fromLTRB(11, 8, 11, 4),
+                                  decoration: BoxDecoration(
+                                    color: Color(0xffc5edf9),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(13)),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Cash',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 16,
+                                          color: Color(0xff00063B),
+                                        ),
+                                      ),
+                                      Text(
+                                        '₹5000',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 24,
+                                          color: Color(0xff0054AC),
+                                          fontStyle: FontStyle.italic,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.fromLTRB(0, 0, 17, 0),
+                                  padding: EdgeInsets.fromLTRB(11, 8, 11, 4),
+                                  decoration: BoxDecoration(
+                                    color: Color(0xffc5edf9),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(13)),
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Federal bank',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 16,
+                                          color: Color(0xff00063B),
+                                        ),
+                                      ),
+                                      Text(
+                                        '₹17000',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 24,
+                                          color: Color(0xff0054AC),
+                                          fontStyle: FontStyle.italic,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
-                            Container(
-                              height: 95,
-                              child: ListView(
-                                scrollDirection: Axis.horizontal,
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.fromLTRB(0, 0, 17, 0),
-                                    padding: EdgeInsets.fromLTRB(11, 8, 11, 4),
-                                    decoration: BoxDecoration(
-                                      color: Color(0xffc5edf9),
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(13)),
-                                    ),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          'Canara Bank',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w400,
-                                            fontSize: 16,
-                                            color: Color(0xff00063B),
-                                          ),
-                                        ),
-                                        Text(
-                                          '₹48000',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 24,
-                                            color: Color(0xff0054AC),
-                                            fontStyle: FontStyle.italic,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.fromLTRB(0, 0, 17, 0),
-                                    padding: EdgeInsets.fromLTRB(11, 8, 11, 4),
-                                    decoration: BoxDecoration(
-                                      color: Color(0xffc5edf9),
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(13)),
-                                    ),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          'Emergency Fund',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w400,
-                                            fontSize: 16,
-                                            color: Color(0xff00063B),
-                                          ),
-                                        ),
-                                        Text(
-                                          '₹22000',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 24,
-                                            color: Color(0xff0054AC),
-                                            fontStyle: FontStyle.italic,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.fromLTRB(0, 0, 17, 0),
-                                    padding: EdgeInsets.fromLTRB(11, 8, 11, 4),
-                                    decoration: BoxDecoration(
-                                      color: Color(0xffc5edf9),
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(13)),
-                                    ),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          'Cash',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w400,
-                                            fontSize: 16,
-                                            color: Color(0xff00063B),
-                                          ),
-                                        ),
-                                        Text(
-                                          '₹5000',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 24,
-                                            color: Color(0xff0054AC),
-                                            fontStyle: FontStyle.italic,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Container(
-                                    margin: EdgeInsets.fromLTRB(0, 0, 17, 0),
-                                    padding: EdgeInsets.fromLTRB(11, 8, 11, 4),
-                                    decoration: BoxDecoration(
-                                      color: Color(0xffc5edf9),
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(13)),
-                                    ),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          'Federal bank',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w400,
-                                            fontSize: 16,
-                                            color: Color(0xff00063B),
-                                          ),
-                                        ),
-                                        Text(
-                                          '₹17000',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 24,
-                                            color: Color(0xff0054AC),
-                                            fontStyle: FontStyle.italic,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
+                          )
+                        ],
                       ),
                     ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                      padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+                      decoration: BoxDecoration(
+                        color: Color(0xfff9f9f9),
+                        borderRadius: BorderRadius.all(Radius.circular(24)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'My Goals',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xff00063B),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'iPhone 15 Pro',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff00063B),
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                                width: 150,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: LinearProgressIndicator(
+                                    value: 0.7,
+                                    backgroundColor: Color(0xff00D1FF),
+                                    valueColor: AlwaysStoppedAnimation(
+                                        Color(0xff0A1D79)),
+                                    minHeight: 4,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Gaming Controller',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff00063B),
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                                width: 150,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: LinearProgressIndicator(
+                                    value: 0.3,
+                                    backgroundColor: Color(0xff00D1FF),
+                                    valueColor: AlwaysStoppedAnimation(
+                                        Color(0xff0A1D79)),
+                                    minHeight: 4,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),
