@@ -96,6 +96,8 @@ flutter:
           weight: 200
         - asset: fonts/Barlow-ExtraLight.ttf
           weight: 100
+        - asset: fonts/Barlow-MediumItalic.ttf
+          style: italic
 
   #   - family: Trajan Pro
   #     fonts:
