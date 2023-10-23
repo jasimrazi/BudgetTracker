@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.fromLTRB(25, 70, 25, 30),
+              margin: EdgeInsets.fromLTRB(25, 70, 25, 30),
               alignment: Alignment.center,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -40,10 +40,10 @@ class _HomePageState extends State<HomePage> {
                       color: Colors.white,
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(5, 0, 5, 0),
                     child: Text(
-                      'Hey Jasim!',
+                      'UserUserUser',
                       style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 24,
@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Container(
                     height: 60,
-                    width: 70,
+                    width: 60,
                     decoration: BoxDecoration(
                       color: Colors.white12,
                       shape: BoxShape.circle,
@@ -84,6 +84,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 child: ListView(
+                  physics: BouncingScrollPhysics(),
                   children: [
                     Container(
                       margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
@@ -138,146 +139,48 @@ class _HomePageState extends State<HomePage> {
                           ),
                           Container(
                             height: 95,
-                            child: ListView(
+                            child: ListView.builder(
+                              itemCount:
+                                  3, // Adjust the number of containers as needed.
                               scrollDirection: Axis.horizontal,
-                              children: [
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(0, 0, 17, 0),
-                                  padding: EdgeInsets.fromLTRB(11, 8, 11, 4),
-                                  decoration: BoxDecoration(
-                                    color: Color(0xffc5edf9),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(13)),
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        'Canara Bank',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 16,
-                                          color: Color(0xff00063B),
+                              physics: BouncingScrollPhysics(),
+                              itemBuilder: (BuildContext context, int index) {
+                                return Container(
+                                    width:
+                                        150, // Adjust the width of the containers as needed.
+                                    margin: EdgeInsets.only(right: 20),
+                                    padding: EdgeInsets.fromLTRB(11, 8, 11,
+                                        4), // Adjust spacing between containers.
+                                    decoration: BoxDecoration(
+                                      color: Color(0xffc5edf9),
+                                      borderRadius: BorderRadius.circular(15),
+                                    ),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          'Accounts',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 16,
+                                            color: Color(0xff00063B),
+                                          ),
                                         ),
-                                      ),
-                                      Text(
-                                        '₹48000',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 24,
-                                          color: Color(0xff0054AC),
-                                          fontStyle: FontStyle.italic,
+                                        Text(
+                                          '${index + 1}',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 24,
+                                            color: Color(0xff0054AC),
+                                            fontStyle: FontStyle.italic,
+                                          ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(0, 0, 17, 0),
-                                  padding: EdgeInsets.fromLTRB(11, 8, 11, 4),
-                                  decoration: BoxDecoration(
-                                    color: Color(0xffc5edf9),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(13)),
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        'Emergency Fund',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 16,
-                                          color: Color(0xff00063B),
-                                        ),
-                                      ),
-                                      Text(
-                                        '₹22000',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 24,
-                                          color: Color(0xff0054AC),
-                                          fontStyle: FontStyle.italic,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(0, 0, 17, 0),
-                                  padding: EdgeInsets.fromLTRB(11, 8, 11, 4),
-                                  decoration: BoxDecoration(
-                                    color: Color(0xffc5edf9),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(13)),
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        'Cash',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 16,
-                                          color: Color(0xff00063B),
-                                        ),
-                                      ),
-                                      Text(
-                                        '₹5000',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 24,
-                                          color: Color(0xff0054AC),
-                                          fontStyle: FontStyle.italic,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Container(
-                                  margin: EdgeInsets.fromLTRB(0, 0, 17, 0),
-                                  padding: EdgeInsets.fromLTRB(11, 8, 11, 4),
-                                  decoration: BoxDecoration(
-                                    color: Color(0xffc5edf9),
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(13)),
-                                  ),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        'Federal bank',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 16,
-                                          color: Color(0xff00063B),
-                                        ),
-                                      ),
-                                      Text(
-                                        '₹17000',
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 24,
-                                          color: Color(0xff0054AC),
-                                          fontStyle: FontStyle.italic,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
+                                      ],
+                                    ));
+                              },
                             ),
                           )
                         ],
